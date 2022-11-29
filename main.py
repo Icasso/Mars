@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
-import datetime
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from config import load_config
 
 load_config()
@@ -20,7 +21,6 @@ def get_status():
 
 
 st.title("Project - Mars")
-
 curr_status = get_status()
 if curr_status is not None and len(curr_status) != 0:
     st.header('OKX Status')
@@ -30,10 +30,10 @@ if curr_status is not None and len(curr_status) != 0:
         title = status['title']
         start = int(status['begin']) / 1000.0
         end = int(status['end']) / 1000.0
-        start_date = datetime.datetime.fromtimestamp(start)
-        end_date = datetime.datetime.fromtimestamp(end)
+        start_date = datetime.fromtimestamp(start, tz=ZoneInfo("Asia/Hong_Kong"))
+        end_date = datetime.fromtimestamp(end, tz=ZoneInfo("Asia/Hong_Kong"))
         st.warning(title)
         col1, col2 = st.columns(2)
-        col1.time_input("From", start_date, disabled=True, key="From" + str(count))
+        col1.time_input("HKT: From", start_date, disabled=True, key="From" + str(count))
         col2.time_input("To", end_date, disabled=True, key="To" + str(count))
         count += 1
