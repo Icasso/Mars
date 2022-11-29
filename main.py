@@ -23,7 +23,7 @@ def get_status():
 st.title("Project - Mars")
 curr_status = get_status()
 if curr_status is not None and len(curr_status) != 0:
-    st.header('OKX Status')
+    st.header('Live OKX Status')
     count = 0
     for status in curr_status:
         st.write('---')
