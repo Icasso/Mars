@@ -1,6 +1,6 @@
 # [Mars] The Crypto Exchange Status tracker
 ---
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://icasso-mars-main-j9dux6.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crypto-exchange-status.streamlit.app/)
 
 ## Live status from crypto exchanges
 - Binance
