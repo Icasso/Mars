@@ -14,16 +14,17 @@ st.info(
     "Check the status of Crypto Exchanges upgrades, system maintenance, potential service outages, and crypto deposits "
     "and withdrawals")
 
-exchange = st.selectbox("Select Crypto Exchange", ("Binance", "OKX", "Kraken", "Kucoin"))
+exchange = st.selectbox("Select Crypto Exchange",
+                        ("OKX", "Kucoin", "Kraken", "Binance - International"))
 
 match exchange:
-    case "Binance":
-        StatusService.binance_status(BinanceClient.get_status())
     case "OKX":
         StatusService.okx_status(OKXClient.get_status())
-    case "Kraken":
-        StatusService.kraken_status(KrakenClient.get_status())
     case "Kucoin":
         StatusService.kucoin_status(KucoinClient.get_status())
+    case "Kraken":
+        StatusService.kraken_status(KrakenClient.get_status())
+    case "Binance - International":
+        StatusService.binance_status(BinanceClient.get_status("INTERNATIONAL"))
     case _:
         st.empty()
