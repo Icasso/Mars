@@ -1,10 +1,12 @@
-# [Mars] The OKX Status tracker
+# [Mars] The Crypto Exchange Status tracker
 ---
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://icasso-mars-main-j9dux6.streamlit.app/)
 
-## Live Status from OKX
-- Status
-- Date range
+## Live status from crypto exchanges
+- Binance
+- OKX
+- Kraken
+- Kucoin
 
 ---
 You can directly access with above badge, or you wish to access locally,
